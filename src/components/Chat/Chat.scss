@@ -1,0 +1,75 @@
+.Chat {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .Window {
+    max-width: 400px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 0;
+  }
+}
+
+.Message {
+  margin-right: 1rem;
+  font-size: 1rem;
+  background: #000;
+  border-radius: 10px;
+  display: inline-block;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  .Typing {
+    display: flex;
+    justify-content: center;
+    svg {
+      height: 10px;
+      width: auto;
+    }
+  }
+}
+
+.AnswerContainer {
+  margin-top: 2rem;
+}
+
+.Answer {
+  margin-left: 2rem;
+  font-size: 1rem;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  color: #000;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  float: right;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    background: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+.Typing {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  svg {
+    height: 10px;
+    width: auto;
+  }
+}
+
+.Head {
+  height: 130px;
+  width: auto;
+  margin-bottom: 2rem;
+
+  display: block;
+}

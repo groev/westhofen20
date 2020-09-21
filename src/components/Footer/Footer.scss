@@ -1,0 +1,13 @@
+.Footer {
+  background: #000;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 12px;
+  svg {
+    margin-bottom: 2rem;
+  }
+}
