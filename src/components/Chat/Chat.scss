@@ -4,16 +4,20 @@
   align-items: center;
   justify-content: center;
   .Window {
-    max-width: 400px;
+    max-width: 100%;
     width: 400px;
-    border-radius: 10px;
-    padding: 0;
   }
 }
 
+.Head {
+  height: 130px;
+  width: auto;
+  margin-bottom: 2rem;
+  display: block;
+}
+
 .Message {
-  margin-right: 1rem;
-  font-size: 1rem;
+  margin-right: 2rem;
   background: #000;
   border-radius: 10px;
   display: inline-block;
@@ -36,7 +40,6 @@
 
 .Answer {
   margin-left: 2rem;
-  font-size: 1rem;
   border: 1px solid #000;
   border-radius: 10px;
   color: #000;
@@ -51,6 +54,7 @@
     transition: all 0.3s ease;
   }
 }
+
 .Typing {
   display: flex;
   justify-content: center;
@@ -62,12 +66,4 @@
     height: 10px;
     width: auto;
   }
-}
-
-.Head {
-  height: 130px;
-  width: auto;
-  margin-bottom: 2rem;
-
-  display: block;
 }

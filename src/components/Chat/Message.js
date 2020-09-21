@@ -1,16 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Typing from "./Typing";
+import React from "react";
 
-export default function Message({ data, status }) {
-  const [isTyping, setIsTyping] = useState(true);
-  useEffect(() => {
-    if (status !== "completed") {
-      setTimeout(function () {
-        setIsTyping(false);
-      }, 1000);
-    } else {
-      setIsTyping(false);
-    }
-  }, []);
+export default function Message({ data }) {
   return <div className="Message">{data}</div>;
 }

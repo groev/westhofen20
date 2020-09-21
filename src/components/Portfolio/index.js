@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Chat } from "../../images";
 import "./Portfolio.scss";
 
-export default function Portfolio({}) {
+export default function Portfolio() {
   const item = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },

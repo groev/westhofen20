@@ -10,7 +10,7 @@ export default function Typing() {
         x="0px"
         y="0px"
         viewBox="0 0 58 24"
-        enable-background="new 0 0 0 0"
+        enableBackground="new 0 0 0 0"
       >
         <circle fill="#fff" stroke="none" cx="6" cy="12" r="6">
           <animate

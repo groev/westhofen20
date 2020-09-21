@@ -6,10 +6,11 @@ import Message from "./Message";
 import Answer from "./Answer";
 import Typing from "./Typing";
 import { Head } from "../../images";
-
 import { motion } from "framer-motion";
-
+import MessageSound from "../../sounds/message.mp3";
+import Sound from "react-sound";
 export default function Chat() {
+  const [playing, setPlaying] = useState(false);
   const { slug, status } = useParams();
   const currentDialog = data.find((dialog) => dialog.slug === slug) || data[0];
   const [messages, setMessages] = useState([]);
@@ -22,7 +23,8 @@ export default function Chat() {
       currentDialog.messages &&
         currentDialog.messages.forEach((message, idx) => {
           setTimeout(function () {
-            setMessages((old) => [...old, message]);
+            setMessages((prevMessages) => [...prevMessages, message]);
+            setPlaying("PLAYING");
             if (idx + 1 === currentDialog.messages.length) {
               setTimeout(function () {
                 setCompleted(true);
@@ -35,6 +37,7 @@ export default function Chat() {
       setCompleted(true);
     }
   }, [slug, status]);
+
   const container = {
     show: {
       transition: {
@@ -52,6 +55,7 @@ export default function Chat() {
     <div className="Chat">
       <div className="Window">
         <img className="Head" src={Head} alt="Head" />
+        <Sound url={MessageSound} playStatus={playing} playFromPosition={0} />
         <motion.div
           variants={container}
           initial="hidden"
@@ -61,7 +65,7 @@ export default function Chat() {
           {messages &&
             messages.map((message, idx) => {
               return (
-                <motion.div variants={item}>
+                <motion.div key={`message-${idx}`} variants={item}>
                   <Message status={status} data={message} />
                 </motion.div>
               );
@@ -78,7 +82,7 @@ export default function Chat() {
             currentDialog.answers &&
             currentDialog.answers.map((message, idx) => {
               return (
-                <motion.div variants={item}>
+                <motion.div key={`answer-${idx}`} variants={item}>
                   <Answer data={message} />
                 </motion.div>
               );
