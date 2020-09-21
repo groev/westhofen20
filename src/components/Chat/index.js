@@ -55,7 +55,6 @@ export default function Chat() {
     <div className="Chat">
       <div className="Window">
         <img className="Head" src={Head} alt="Head" />
-        <Sound url={MessageSound} playStatus={playing} playFromPosition={0} />
         <motion.div
           variants={container}
           initial="hidden"
