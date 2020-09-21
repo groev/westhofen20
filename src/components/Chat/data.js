@@ -7,14 +7,14 @@ const data = [
     ],
     answers: [
       { label: "Tell me a little about yourself.", link: "/chat/bio" },
-      { label: "Show me your your projects!", link: "/portfolio" },
+      { label: "Show me your projects!", link: "/portfolio" },
       { label: "How can I contact you?", link: "/chat/contact" },
     ],
   },
   {
     slug: "bio",
     messages: [
-      "My name is Magnus and I'm from Solingen, Germany and I'm 30 years old.",
+      "My name is Magnus Westhofen and I'm from Solingen, Germany and I'm 30 years old.",
       "I've been designing and developing stuff for the web since I'm 14. The first website I've done was for my CS 1.3 clan ;-)",
       "I am working for a small agency shop in Solingen right now and my main focus is building cool frontends with React.",
     ],
@@ -40,7 +40,7 @@ const data = [
     ],
     answers: [
       {
-        label: "Let's start again!",
+        label: "Okay! Let's start again.",
         link: "/chat/start/completed",
       },
     ],

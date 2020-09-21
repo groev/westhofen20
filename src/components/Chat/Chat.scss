@@ -1,5 +1,5 @@
 .Chat {
-  min-height: 80vh;
+  min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,10 +37,8 @@
 .Answer {
   margin-left: 2rem;
   font-size: 1rem;
-
   border: 1px solid #000;
   border-radius: 10px;
-  display: inline-block;
   color: #000;
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;

@@ -6,14 +6,23 @@
       font-size: 1.5rem;
     }
   }
-  .back {
+  a.back {
     color: #000;
     text-decoration: none;
     font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+    img {
+      height: 20px;
+      width: auto;
+      display: inline-block;
+      margin-bottom: -3px;
+      margin-right: 3px;
+    }
   }
   .grid {
     margin-top: 4rem;
-
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     grid-gap: 1rem;
@@ -47,6 +56,8 @@
         height: 100%;
         font-size: 2rem;
         text-align: center;
+        transition: all 0.3s ease;
+
         padding: 30px;
         img {
           max-height: 80%;
@@ -56,6 +67,7 @@
         }
       }
       .back {
+        transition: all 0.3s ease;
         color: #fff;
         font-weight: 400;
         text-align: center;
@@ -71,7 +83,6 @@
         transform: translateY(100%);
         a {
           margin: 5px;
-
           display: inline-block;
           background: #fff;
           border-radius: 5px;
@@ -85,9 +96,11 @@
         }
       }
       &:hover .front {
+        transition: all 0.3s ease;
         transform: translateY(-100%);
       }
       &:hover .back {
+        transition: all 0.3s ease;
         transform: translateY(0%);
       }
     }

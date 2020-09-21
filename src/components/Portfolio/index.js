@@ -3,6 +3,7 @@ import Project from "./project";
 import Projects from "./data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Chat } from "../../images";
 import "./Portfolio.scss";
 
 export default function Portfolio({}) {
@@ -15,7 +16,7 @@ export default function Portfolio({}) {
     <div className="Portfolio">
       <h1>Here are some of my personal Projects</h1>
       <Link className="back" to="/chat/start/completed">
-        Go back to chatting.
+        <img src={Chat} alt="Chat" /> Go back to chatting.
       </Link>
       <motion.div className="grid" initial="hidden" animate="show">
         {Projects.map((project) => {

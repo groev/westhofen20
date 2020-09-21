@@ -1,24 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/index.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Header, Container, Chat, Portfolio, Footer } from "./components";
+import {
+  Header,
+  Container,
+  Chat,
+  Portfolio,
+  Footer,
+  Loader,
+} from "./components";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+  }, []);
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Container>
-          <Switch>
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/chat/:slug/:status" component={Chat} />
-            <Route path="/chat/:slug/" component={Chat} />
-
-            <Chat />
-          </Switch>
-        </Container>
-        <Footer />
-      </div>
+      {!isLoading ? (
+        <div className="App">
+          <Header />
+          <Container>
+            <Switch>
+              <Route path="/portfolio" component={Portfolio} />
+              <Route path="/chat/:slug/:status" component={Chat} />
+              <Route path="/chat/:slug/" component={Chat} />
+              <Chat />
+            </Switch>
+          </Container>
+          <Footer />
+        </div>
+      ) : (
+        <Loader />
+      )}
     </BrowserRouter>
   );
 }
