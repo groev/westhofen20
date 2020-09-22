@@ -7,7 +7,7 @@ const data = [
 		],
 		answers: [
 			{ label: 'Tell me a little about yourself.', link: '/chat/bio' },
-			{ label: 'Show me your projects!', link: '/portfolio' },
+			{ label: 'Show me your projects!', link: '/chat/portfolio' },
 			{ label: 'How can I contact you?', link: '/chat/contact' },
 		],
 	},
@@ -20,7 +20,7 @@ const data = [
 		],
 		answers: [
 			{ label: 'What technologies are you using?', link: '/chat/tech' },
-			{ label: "Show me some stuff you've done.", link: '/portfolio' },
+			{ label: "Show me some stuff you've done.", link: '/chat/portfolio' },
 		],
 	},
 	{
@@ -30,7 +30,9 @@ const data = [
 			'I really like using serverless/jamstacky backends like Firebase, but I can spin up some basic node Backend stack if needed.',
 			'My guilty pleasure is developing with/for WordPress. Especially using it as headless CMS to power React Frontends.',
 		],
-		answers: [{ label: 'Cool, show me some projects', link: '/portfolio' }],
+		answers: [
+			{ label: 'Cool, show me some projects', link: '/chat/portfolio' },
+		],
 	},
 	{
 		slug: 'contact',
@@ -44,6 +46,10 @@ const data = [
 				link: '/chat/start/completed',
 			},
 		],
+	},
+	{
+		slug: 'portfolio',
+		messages: ['Wait a second, let me get my projects ...'],
 	},
 ];
 

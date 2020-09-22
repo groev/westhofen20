@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Chat.scss';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import data from './data';
 import Message from './Message';
 import Answer from './Answer';
@@ -9,6 +9,7 @@ import { Head } from '../../images';
 import { motion } from 'framer-motion';
 
 export default function Chat() {
+	const history = useHistory();
 	const { slug, status } = useParams();
 	const currentDialog = data.find((dialog) => dialog.slug === slug) || data[0];
 	const [messages, setMessages] = useState([]);
@@ -24,6 +25,9 @@ export default function Chat() {
 						setMessages((prevMessages) => [...prevMessages, message]);
 						if (idx + 1 === currentDialog.messages.length) {
 							setTimeout(function () {
+								if (slug === 'portfolio') {
+									history.push('/portfolio');
+								}
 								setCompleted(true);
 							}, 1500);
 						}
