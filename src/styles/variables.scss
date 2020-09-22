@@ -1,0 +1,13 @@
+$color1: #000;
+$color2: #fff;
+$breakMobile: 800px;
+
+@mixin ease {
+	transition: all 0.3s ease;
+}
+
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
