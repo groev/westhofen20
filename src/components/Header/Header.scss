@@ -1,42 +1,42 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .Header {
-	display: flex;
-	justify-content: space-between;
-	padding: 0.5rem 1rem 0.5rem 0.5rem;
-	align-items: center;
-	height: 100px;
-	.Logo {
-		svg {
-			height: 80px;
-			width: auto;
-			@include ease;
-		}
-		&:hover {
-			@include ease;
-			transform: scale(1.1);
-		}
-	}
-	.Menu {
-		ul {
-			margin: 0;
-			li {
-				float: left;
-				margin-right: 0.5rem;
-				list-style: none;
-				a {
-					display: inline-block;
-					@include ease;
-					svg {
-						height: 2rem;
-						width: auto;
-					}
-					&:hover {
-						@include ease;
-						transform: scale(1.1);
-					}
-				}
-			}
-		}
-	}
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  align-items: center;
+  height: 100px;
+  .Logo {
+    svg {
+      height: 80px;
+      width: auto;
+      @include ease;
+    }
+    &:hover {
+      @include ease;
+      transform: scale(1.1);
+    }
+  }
+  .MainMenu {
+    ul {
+      margin: 0;
+      li {
+        float: left;
+        margin-right: 0.5rem;
+        list-style: none;
+        a {
+          display: inline-block;
+          @include ease;
+          svg {
+            height: 2rem;
+            width: auto;
+          }
+          &:hover {
+            @include ease;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
 }
