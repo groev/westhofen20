@@ -1,62 +1,64 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .Chat {
-	min-height: calc(100vh - 100px);
-	@include flexCenter;
-	.Head {
-		height: 130px;
-		width: auto;
-		margin-bottom: 2rem;
-		display: block;
-	}
-	.Window {
-		max-width: 400px;
-	}
-	.MessageContainer {
-		.Message {
-			margin-right: 2rem;
-			background: $color1;
-			border-radius: 10px;
-			display: inline-block;
-			color: $color2;
-			padding: 0.5rem 1rem;
-			margin: 0 2rem 0.5rem 0;
-			.Typing {
-				display: flex;
-				justify-content: center;
-				svg {
-					height: 10px;
-					width: auto;
-				}
-			}
-		}
-	}
-	.AnswerContainer {
-		margin-top: 2rem;
-		.Answer {
-			@include ease;
-			border: 1px solid $color1;
-			border-radius: 10px;
-			color: $color1;
-			padding: 0.5rem 1rem;
-			margin: 0 2rem 0.5rem 0;
-			float: right;
-			text-decoration: none;
-			&:hover {
-				background: $color1;
-				color: $color2;
-				@include ease;
-			}
-		}
-	}
-	.Typing {
-		background: rgba(0, 0, 0, 0.2);
-		display: inline-block;
-		border-radius: 10px;
-		padding: 0.5rem 1rem;
-		svg {
-			height: 10px;
-			width: auto;
-		}
-	}
+  min-height: calc(100vh - 100px);
+  @include flexCenter;
+  .Head {
+    height: 130px;
+    width: auto;
+    margin-bottom: 2rem;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+  }
+  .Window {
+    max-width: 400px;
+  }
+  .MessageContainer {
+    .Message {
+      margin-right: 2rem;
+      background: $color1;
+      border-radius: 10px;
+      display: inline-block;
+      color: $color2;
+      padding: 0.5rem 1rem;
+      margin: 0 2rem 0.5rem 0;
+      .Typing {
+        display: flex;
+        justify-content: center;
+        svg {
+          height: 10px;
+          width: auto;
+        }
+      }
+    }
+  }
+  .AnswerContainer {
+    margin-top: 2rem;
+    .Answer {
+      @include ease;
+      border: 1px solid $color1;
+      border-radius: 10px;
+      color: $color1;
+      padding: 0.5rem 1rem;
+      margin: 0 2rem 0.5rem 0;
+      float: right;
+      text-decoration: none;
+      &:hover {
+        background: $color1;
+        color: $color2;
+        @include ease;
+      }
+    }
+  }
+  .Typing {
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    svg {
+      height: 10px;
+      width: auto;
+    }
+  }
 }
